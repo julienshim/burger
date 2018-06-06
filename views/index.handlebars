@@ -1,3 +1,21 @@
      {{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto. --}}
 
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+        <li>{{this.id}}. {{this.burger_name}}</li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+        <li>{{this.id}}. {{this.burger_name}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
           {{!-- * Create a button in `index.handlebars` that will submit the user input into the database. --}}

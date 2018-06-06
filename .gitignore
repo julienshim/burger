@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+.env
+burger_demo.mp4
+homework_instructions.md

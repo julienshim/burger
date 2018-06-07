@@ -1,19 +1,9 @@
-// Import (require) `connection.js` into `orm.js`
-
 var connection = require("../config/connection.js");
 var processing = require("../public/assets/javascript/modules/processing.js");
-// * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. 
-
-
-
-
-
-// These are the methods you will need to use in order to retrieve and store data in your database.
-
 
 var orm = {
 
-
+  //Read
   all: function(tableInput, cb) { // `selectAll()` 
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
@@ -24,7 +14,7 @@ var orm = {
     });
   },
 
-
+  //Create
   create: function(table, cols, vals, cb) {
 
     var queryString = "INSERT INTO " + table;
@@ -33,7 +23,7 @@ var orm = {
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += processing.printQuestionMarks(vals.length);
+    queryString += processing.printQuestionMarks(vals.length); //Function Stored in JS Module
     queryString += ") ";
 
     console.log(queryString);
@@ -42,16 +32,16 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
 
+  //Update
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
-    queryString += processing.objToSql(objColVals);
+    queryString += processing.objToSql(objColVals); //Function Stored in JS Module
     queryString += " WHERE ";
     queryString += condition;
 
@@ -60,11 +50,11 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
 
+  //Delete
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
 
@@ -76,7 +66,6 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   }

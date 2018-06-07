@@ -1,5 +1,3 @@
-//    * Inside the `connection.js` file, setup the code to connect Node to MySQL.
-
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -18,5 +16,4 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-//    * Export the connection.
 module.exports = connection;

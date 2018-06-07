@@ -1,9 +1,8 @@
-// Require the following npm packages inside of the server.js file:
-var express = require("express"); //express
-var methodOverride = require('method-override') //method-override
-var bodyParser = require("body-parser"); // body-parser
+var express = require("express");
+var methodOverride = require('method-override') //Don't think this serves a purpose, but homework instructions asks that we require it on this document.
+var bodyParser = require("body-parser");
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3333;
 
 var app = express();
 

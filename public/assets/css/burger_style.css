@@ -1,0 +1,68 @@
+body, .jumbotron {
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 3.4em;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-weight: bold;
+    background-color: lightsalmon;
+    padding: 15px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.burger {
+    width: 300px;
+}
+
+p {
+    padding-top: 7px;
+    padding-left: 12px;
+    height: 38px;
+}
+
+.inline-button {
+    margin-top: -7px;
+}
+
+.devour  {
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+}
+
+.devoured {
+    background-color: lightpink;
+    border-radius: 5px;
+}
+
+.submit {
+    display: block;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-top: 35px;
+    background-color: lightgreen;
+    border:none;
+    height: 38px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+
+ #burgerInput {
+     font-weight: bold;
+ }

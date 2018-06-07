@@ -1,33 +1,55 @@
      {{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto. --}}
 
-<h2>Undevoured Burgers</h2>
-<ul>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-        <li>{{this.id}}. {{this.burger_name}}</li>
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>Devoured Burgers</h2>
-<ul>
-  {{#each burgers}}
-    {{#if this.devoured}}
-        <li>{{this.id}}. {{this.burger_name}}</li>
-    {{/if}}
-  {{/each}}
-</ul>
+
+
 
 
           {{!-- * Create a button in `index.handlebars` that will submit the user input into the database. --}}
 
-<h2>Add A Burger</h2>
-  <form class="create-form">
 
-  <div class="form-group">
-    <label for="burgerInput">Burger Name:</label>
-    <input type="text" id="burgerInput" name="name">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="jumbotron">
+        <h1 class="font-effect-neon">The Burger List</h1>
+        <img src="assets/img/burger.png" class="burger" alt="burger"/>
+      </div>
+    </div>
   </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+  <div class="row">
+    <!--Burgers To Eat-->
+    <div class="col-md-6">
+      <h2 class="text-center">Burgers to Eat</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+              <li class="devour"><p>{{this.id}}. {{this.burger_name}}<button class="change-devoured-state float-right btn btn-warning inline-button" data-id="{{id}}">Devour</button></p></li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <!--Trash It-->
+    <div class="col-md-6">
+      <h2 class="text-center">Burgers Devoured</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <li class="devoured"><p>{{this.id}}. {{this.burger_name}}<button class="delete-burger float-right btn btn-danger inline-button" data-id="{{id}}">Digest</button></p></li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+      <!--Add A Burger-->
+    <div class="col-md-12 text-center">
+      <form class="create-form">
+        <div class="form-group">
+          <input type="text" id="burgerInput" name="name" placeholder="[ Enter Burger Name Here ]"><button type="submit" class="btn btn-success submit">ADD A BURGER</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

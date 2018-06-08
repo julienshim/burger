@@ -4,7 +4,7 @@ var processing = require("../public/assets/javascript/modules/processing.js");
 var orm = {
 
   //Read
-  all: function(tableInput, cb) { // `selectAll()` 
+  selectAll: function(tableInput, cb) { // `selectAll()` 
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -15,7 +15,7 @@ var orm = {
   },
 
   //Create
-  create: function(table, cols, vals, cb) {
+  insertOne: function(table, cols, vals, cb) {
 
     var queryString = "INSERT INTO " + table;
 
@@ -37,7 +37,7 @@ var orm = {
   },
 
   //Update
-  update: function(table, objColVals, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -55,7 +55,7 @@ var orm = {
   },
 
   //Delete
-  delete: function(table, condition, cb) {
+  deleteOne: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
 
     queryString += " WHERE ";

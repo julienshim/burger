@@ -19,5 +19,5 @@ The Burger List was created for the Node Express Handlebars homework assignment 
 
 **App Demo GIF**
 
-<img src="https://github.com/jerauld/burger/blob/master/public/assets/img/theburgerlist-appdemo.gif?raw=true" width="600px"/>
+<img src="https://github.com/julienshim/burger/blob/master/public/assets/img/theburgerlist-appdemo.gif?raw=true" width="600px"/>
 

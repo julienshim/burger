@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jerauld/burger.git"
+    "url": "git+https://github.com/julienshim/burger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jerauld/burger/issues"
+    "url": "https://github.com/julienshim/burger/issues"
   },
-  "homepage": "https://github.com/jerauld/burger#readme",
+  "homepage": "https://github.com/julienshim/burger#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
